@@ -59,6 +59,24 @@ void setup()                    // run once, when the sketch starts
 {
 
   Serial.begin(9600);
+  Serial.println("'Blow out the candles' puzzle lock 2016 -Sigmaz@gmail.com(Jon Bruno)");
+  Serial.println("sequence is simply 0-1-2-3");
+  Serial.println("---PINOUTS--- ");
+  Serial.println("LED_DATA0 - Pin D3        PW_PIN0 - Pin D8");
+  Serial.println("LED_DATA1 - Pin D4        PW_PIN1 - Pin D9");
+  Serial.println("LED_DATA2 - Pin D5        PW_PIN2 - Pin D10");
+  Serial.println("LED_DATA3 - Pin D6        PW_PIN3 - Pin D11");
+  Serial.println("LOCK_PIN - Pin D13");
+  Serial.println("");
+  Serial.println("Each candle has 1 WS2812B LED and a modified knock sensor. ");
+  Serial.println("4 flickering (WS2812b) candles, Blown out in order trigger unlock event on D13.");
+  Serial.println("In this project use 4 cheap digital knock sensors, remove the spring trigger");
+  Serial.println("and install an electret MIC element. When the player blows on the element it should trigger the sensor.");
+  Serial.println("sensitivity can be adjusted to eliminate false triggers by ambient noise");
+  Serial.println("");
+  
+  
+  
   delay(3000); // 3 second delay for recovery
 //Button setup
   pinMode(LOCK_PIN, OUTPUT);      // sets the digital pin as output
@@ -75,6 +93,12 @@ void setup()                    // run once, when the sketch starts
 
   // set master brightness control
   FastLED.setBrightness(BRIGHTNESS);
+
+
+
+
+
+  
 //end LED setup------------------------------  
 
 
